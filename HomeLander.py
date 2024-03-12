@@ -23,7 +23,6 @@ signatures = [
     # Add more signatures/rules as needed
 
 # Dictionary to store counters for each signatures 
- Dictionary to store counters for each signature
 signature_counters = {signature["name"]: 0 for signature in signatures}
 
 def send_email(subject, body):
