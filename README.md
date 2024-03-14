@@ -3,7 +3,6 @@
 
 
 ## Introduction
-Introduction:
 Welcome to Homelander, an Intrusion Detection System (IDS) Python script designed for in-home lab environments. 
 This script serves as a practical tool for practicing and understanding IDS setups, allowing users to simulate 
 and detect potential security breaches within their network environments. Please note that Homelander is a work
