@@ -12,24 +12,17 @@ in progress and may undergo changes and updates in the future to enhance its fun
 
 
 ## Usage
-	1.	Installation:
-	•	Clone the repository from GitHub:
+	
 
 git clone <repository_url>
 
-	1.	
-	•	Install the required dependencies:
 
 pip install -r requirements.txt
 
 
-	2.	Running the Script:
-	•	Navigate to the directory containing the script:
 
 cd <directory_path>
 
-	2.	
-	•	Execute the main script to start the IDS functionalities:
 
 python homelander.py
 
