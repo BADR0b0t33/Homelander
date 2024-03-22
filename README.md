@@ -8,6 +8,8 @@ This script serves as a practical tool for practicing and understanding IDS setu
 and detect potential security breaches within their network environments. Please note that Homelander is a work
 in progress and may undergo changes and updates in the future to enhance its functionality and usability.
 
+HomeLander.py is the main script for personal home network use, configurations must be set correctly before use. MLS_IDS.py is test idea and has not been properly tested or has the ML traits been trained yet, its just a sample code for theory. 
+
 
 
 ## Usage
