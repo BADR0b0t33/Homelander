@@ -1,15 +1,32 @@
 import smtplib
+import os
 from email.mime.text import MIMEText 
 from scapy.all import sniff, IP, TCP
 
-
 # Define email configuration
-EMAIL_FROM = 'ex: samse90@gmail.com'
-EMAIL_TO = 'ex: bellaboy@gmail.com'
-SMTP_SERVER = 'smtp.gmail.com'
-SMTP_PORT = 587
-SMTP_USERNAME = 'Samse'
-SMTP_PASSWORD = 'hototpic1234'
+#export SMTP_USERNAME='your_smtp_username'
+#export SMTP_PASSWORD='your_smtp_password'
+# Function to load email configuration from environment variables
+def load_email_config():
+    email_from = os.getenv('EMAIL_FROM')
+    email_to = os.getenv('EMAIL_TO')
+    smtp_server = 'smtp.gmail.com'
+    smtp_port = 587
+    smtp_username = os.getenv('SMTP_USERNAME')
+
+    # If two-factor authentication is enabled, use an application-specific password
+    # Otherwise, use the regular SMTP password
+    smtp_password = os.getenv('SMTP_APP_PASSWORD') or os.getenv('SMTP_PASSWORD')
+
+    if not all([email_from, email_to, smtp_username, smtp_password]):
+        raise ValueError("Missing required email configuration")
+
+    return email_from, email_to, smtp_server, smtp_port, smtp_username, smtp_password
+
+# Load email configuration
+EMAIL_FROM, EMAIL_TO, SMTP_SERVER, SMTP_PORT, SMTP_USERNAME, SMTP_PASSWORD = load_email_config()
+
+
 
 
 # Define a list of signatures/rules to detect suspicious behavior 
